@@ -75,3 +75,6 @@
   background-color: #b7cde1; 
 }
 
+#texto-mail{
+  font-size: clamp(16px, 4vw, 22px);
+}
