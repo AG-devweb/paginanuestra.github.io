@@ -1,364 +1,760 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A&G Web Development</title>
 
-  <title>A&G Web Development</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
 
-  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
 
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet" />
 
-  <!-- Fonts -->
-  <link rel="dns-prefetch" href="//fonts.gstatic.com">
-  <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/main.css">
+  <body>
+    <div id="app">
+      <nav class="d-flex justify-content-center">
+        <div
+          class="home-container navbar navbar-expand-lg navbar-light position-absolute rounded-pill mt-4"
+          style="z-index: 9999; width: 95%; background-color: #ffffffd8"
+        >
+          <div class="container-fluid" style="width: 90%">
+            <a class="navbar-brand" href="/">
+              <img src="img/logo.png" height="45" alt="" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="{{ __('Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-</head>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <!-- Left Side Of Navbar -->
+              <ul class="navbar-nav me-auto"></ul>
 
-<body>
-  <div id="app">
-    <nav class=" d-flex justify-content-center">
-      <div class="home-container navbar navbar-expand-lg navbar-light position-absolute rounded-pill mt-4" style="z-index: 9999; width:95%; background-color: #ffffffd8;">
-        <div class="container-fluid" style="width:90%">
-          <a class="navbar-brand" href="/">
-            <img src="img/logo.png" height="45" alt="">
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+              <!-- Right Side Of Navbar -->
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link fs-4" href="/#caracteristicas"
+                    >Caracteristicas</a
+                  >
+                </li>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link fs-4 px-5" href="/#proyectos">Proyectos</a>
+                </li>
 
-            </ul>
-
-            <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link fs-4" href="/#caracteristicas">Caracteristicas</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link fs-4 px-5" href="/#proyectos">Proyectos</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="btn btn-yellow-light nav-link rounded-pill px-3 fs-4" href="/#contacto">Contactanos</a>
-              </li>
-            </ul>
+                <li class="nav-item">
+                  <a
+                    class="btn btn-yellow-light nav-link rounded-pill px-3 fs-4"
+                    href="/#contacto"
+                    >Contactanos</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-    <main class="home-container bg-white position-relative" style="padding: 8rem 0 0 0">
-      <section id="hero-home" class="w-100 position-relative degrade">
-
-        <div class="container pt-5">
-          <h1 class="display-3 font-josefin fst-italic pt-5 pb-4 text-white">A&G Desarrollo y Diseño Web</h1>
-          <div id="parrafo-hero" class="fs-4 font-josefin py-4 px-5 rounded-4 shadow-lg" style="max-width:900px;color:#DDE7F1">
-            <div class="row py-4">
-              <div class="col">
-                <div class="row">
-                  <div class="col-auto"><img src="img/iconos-hero/tienda.svg" alt=""></div>
-                  <div class="col"><span>Tienda para emprendedores</span></div>
+      <main
+        class="home-container bg-white position-relative"
+        style="padding: 8rem 0 0 0"
+      >
+        <section id="hero-home" class="w-100 position-relative degrade">
+          <div class="container pt-5">
+            <h1 class="display-3 font-josefin fst-italic pt-5 pb-4 text-white">
+              A&G Desarrollo y Diseño Web
+            </h1>
+            <div
+              id="parrafo-hero"
+              class="fs-4 font-josefin py-4 px-5 rounded-4 shadow-lg"
+              style="max-width: 900px; color: #dde7f1"
+            >
+              <div class="row py-4">
+                <div class="col">
+                  <div class="row">
+                    <div class="col-auto">
+                      <img src="img/iconos-hero/tienda.svg" alt="" />
+                    </div>
+                    <div class="col">
+                      <span>Tienda para emprendedores</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="row">
+                    <div class="col-auto">
+                      <img src="img/iconos-hero/personal.svg" alt="" />
+                    </div>
+                    <div class="col"><span>Sitios web personales</span></div>
+                  </div>
                 </div>
               </div>
-              <div class="col">
-                <div class="row">
-                  <div class="col-auto"><img src="img/iconos-hero/personal.svg" alt="">
+              <div class="row py-4">
+                <div class="col">
+                  <div class="row">
+                    <div class="col-auto">
+                      <img src="img/iconos-hero/hosting.svg" alt="" />
+                    </div>
+                    <div class="col">
+                      <span
+                        >Instalacion y mantenimiento de hosting y dominio</span
+                      >
+                    </div>
                   </div>
-                  <div class="col"><span>Sitios web personales</span></div>
+                </div>
+                <div class="col">
+                  <div class="row">
+                    <div class="col-auto">
+                      <img src="img/iconos-hero/responsive.svg" alt="" />
+                    </div>
+                    <div class="col">
+                      <span>Diseño adaptable a distintas pantallas</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row py-4">
+                <div class="col">
+                  <div class="row">
+                    <div class="col-auto">
+                      <img src="img/iconos-hero/seo.svg" alt="" />
+                    </div>
+                    <div class="col"><span>Optimización SEO</span></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="row">
+                    <div class="col-auto">
+                      <img src="img/iconos-hero/autogestionable.svg" alt="" />
+                    </div>
+                    <div class="col">
+                      <span>Sitios web autogestionables</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="row py-4">
-              <div class="col">
-                <div class="row">
-                  <div class="col-auto">
-                    <img src="img/iconos-hero/hosting.svg" alt="">
+
+            <img
+              src="img/hero/img-1.png"
+              alt=""
+              class="position-absolute"
+              style="right: 50px; top: 250px"
+            />
+          </div>
+
+          <div class="w-100 separador-bottom separador"></div>
+        </section>
+
+        <section id="caracteristicas" class="container py-4">
+          <h2 class="display-5 font-josefin py-4 text-center fst-italic">
+            Caracteristicas
+          </h2>
+
+          <div
+            class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 py-4"
+          >
+            <div class="col d-flex justify-content-center">
+              <div class="card card-personalizada">
+                <img
+                  src="img/caracteristicas/Diseño.svg"
+                  class="card-img-top m-auto py-3"
+                  style="width: 50%"
+                  alt=""
+                />
+
+                <div class="card-body">
+                  <h5 class="card-title text-center fw-bold">
+                    Diseño personalizado
+                  </h5>
+                  <p class="card-text">
+                    Diseños personalizados y únicos para cada cliente.
+                    Trabajamos en colaboración para entender su necesidades y
+                    objetivos, y crear un diseño que refleje su marca y valores.
+                    Esto garantiza una experiencia de usuario atractiva y
+                    diferenciada de la competencia.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+              <div class="card card-personalizada">
+                <img
+                  src="img/caracteristicas/Responsive.svg"
+                  class="card-img-top m-auto py-3"
+                  style="width: 50%"
+                  alt=""
+                />
+
+                <div class="card-body">
+                  <h5 class="card-title text-center fw-bold">Responsive</h5>
+                  <p class="card-text">
+                    Ofrecemos diseños responsivos que se adaptan a todos los
+                    dispositivos, ya sean moviles, tablets o computadoras de
+                    escritorio. Esto tiene como ventaja una experiencia de
+                    usuario optima en cualquier dispositivo mejorando
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+              <div class="card card-personalizada">
+                <img
+                  src="img/caracteristicas/Reportes.svg"
+                  class="card-img-top m-auto py-3"
+                  style="width: 50%"
+                  alt=""
+                />
+
+                <div class="card-body">
+                  <h5 class="card-title text-center fw-bold">
+                    SEO y Analytics
+                  </h5>
+                  <p class="card-text">
+                    El SEO, optimiza tu sitio web para que sea más visible para
+                    los usuarios y los buscadores. Analytics, te proporciona
+                    datos sobre el tráfico del sitio web, la interaccion del
+                    usuario y cómo mejorar su rendimiento. Estos servicios
+                    pueden ayudarte a aumentar el tráfico en tu sitio web.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col d-flex justify-content-center">
+              <div class="card card-personalizada">
+                <img
+                  src="img/caracteristicas/Rendimiento.svg"
+                  class="card-img-top m-auto py-3"
+                  style="width: 50%"
+                  alt=""
+                />
+
+                <div class="card-body">
+                  <h5 class="card-title text-center fw-bold">
+                    Rendimiento y optimización
+                  </h5>
+                  <p class="card-text">
+                    Mejoramos el rendimiento y la optimización de la página web
+                    para que funcione de manera más eficiente y rápida, lo que
+                    puede mejorar la experiencia del usuario y aumentar la
+                    visibilidad y el tráfico del sitio web.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="proyectos" class="container py-4">
+          <h2 class="display-5 font-josefin text-center fst-italic">
+            Proyectos
+          </h2>
+
+          <div id="carouselExampleIndicators" class="carousel slide py-5">
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <!-- proyecto arquitectura -->
+              <div class="carousel-item active">
+                <div class="row g-5">
+                  <div class="col-12 col-lg-6">
+                    <h2>ES Arquitectura</h2>
+
+                    <p>
+                      ES Arquitecura es una plataforma digital única en su tipo,
+                      diseñada para presentar proyectos de arquitectura de
+                      manera innovadora y elegante. Funciona como una galería
+                      virtual, ofreciendo a los usuarios la posibilidad de
+                      exhibir sus creaciones en línea con gran calidad y
+                      detalle.
+                    </p>
+
+                    <p>
+                      Una de las principales ventajas de ES Arquitecura es su
+                      facilidad de uso, ya que cuenta con una práctica
+                      herramienta de administración de galerías y álbumes. Esto
+                      permite a los usuarios organizar sus proyectos de manera
+                      eficiente y personalizada, para que puedan ser fácilmente
+                      encontrados y apreciados por sus clientes.
+                    </p>
+
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink pt-3"></i>
+                      WordPress</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i>
+                      MySQL</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i> PHP</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i>
+                      JavaScript</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i>
+                      HTML/CSS</span
+                    >
                   </div>
                   <div class="col">
-                    <span>Instalacion y mantenimiento de hosting y dominio</span>
+                    <img
+                      src="img/proyecto/responsive-arq.png"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                 </div>
               </div>
-              <div class="col">
-                <div class="row">
-                  <div class="col-auto"><img src="img/iconos-hero/responsive.svg" alt="">
+              <!-- proyecto malena -->
+              <div class="carousel-item">
+                <div class="row g-5">
+                  <div class="col-12 col-lg-6">
+                    <h2>The Travel Translator</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Explicabo sequi nobis libero quam. Laboriosam iste neque
+                      quae, suscipit, ipsam commodi libero eaque totam mollitia
+                      inventore architecto vel dolorem itaque aliquid!Distinctio
+                      soluta, similique modi, veniam quas sit explicabo
+                      inventore totam sunt, nihil commodi tempora minus eveniet
+                      ducimus illo autem! Labore omnis itaque id est reiciendis
+                      quibusdam commodi doloremque aliquam incidunt?
+                    </p>
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink pt-3"></i>
+                      Laravel</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i>
+                      MySQL</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i> PHP</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i>
+                      JavaScript</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i>
+                      Bootstrap</span
+                    >
                   </div>
-                  <div class="col"><span>Diseño adaptable a distintas pantallas</span></div>
+                  <div class="col">
+                    <img
+                      src="img/proyecto/responsive-male.png"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="row py-4">
-              <div class="col">
-                <div class="row">
-                  <div class="col-auto"><img src="img/iconos-hero/seo.svg" alt=""></div>
-                  <div class="col"><span>Optimización SEO</span></div>
+              <!-- proyecto tp dinamica shop celular -->
+              <div class="carousel-item">
+                <div class="row g-5">
+                  <div class="col-12 col-lg-6">
+                    <h2>Shop Celulares</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Explicabo sequi nobis libero quam. Laboriosam iste neque
+                      quae, suscipit, ipsam commodi libero eaque totam mollitia
+                      inventore architecto vel dolorem itaque aliquid!Distinctio
+                      soluta, similique modi, veniam quas sit explicabo
+                      inventore totam sunt, nihil commodi tempora minus eveniet
+                      ducimus illo autem! Labore omnis itaque id est reiciendis
+                      quibusdam commodi doloremque aliquam incidunt?
+                    </p>
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink pt-3"></i>
+                      Laravel</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i>
+                      MySQL</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i> PHP</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i>
+                      JavaScript</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i>
+                      Bootstrap</span
+                    >
+                  </div>
+                  <div class="col">
+                    <img
+                      src="img/proyecto/responsive-shop-celular.png"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
                 </div>
               </div>
-              <div class="col">
-                <div class="row">
-                  <div class="col-auto"><img src="img/iconos-hero/autogestionable.svg"
-                      alt=""></div>
-                  <div class="col"><span>Sitios web autogestionables</span></div>
+              <!--proyecto aulario  -->
+              <div class="carousel-item">
+                <div class="row g-5">
+                  <div class="col-12 col-lg-6">
+                    <h2>Aulario UNCO</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Explicabo sequi nobis libero quam. Laboriosam iste neque
+                      quae, suscipit, ipsam commodi libero eaque totam mollitia
+                      inventore architecto vel dolorem itaque aliquid!Distinctio
+                      soluta, similique modi, veniam quas sit explicabo
+                      inventore totam sunt, nihil commodi tempora minus eveniet
+                      ducimus illo autem! Labore omnis itaque id est reiciendis
+                      quibusdam commodi doloremque aliquam incidunt?
+                    </p>
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink pt-3"></i>
+                      Laravel</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i>
+                      MySQL</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i> PHP</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i>
+                      JavaScript</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i>
+                      Bootstrap</span
+                    >
+                  </div>
+                  <div class="col">
+                    <img
+                      src="img/proyecto/responsive-aulario.png"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <img src="img/hero/img-1.png" alt="" class="position-absolute"
-            style="right:50px; top:250px">
-        </div>
-
-        <div class="w-100 separador-bottom separador">
-        </div>
-
-      </section>
-
-      <section id="caracteristicas" class="container py-4">
-        <h2 class="display-5 font-josefin py-4 text-center fst-italic">Caracteristicas</h2>
-
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-3 py-4">
-          <div class="col d-flex justify-content-center">
-            <div class="card card-personalizada">
-              <img src="img/caracteristicas/Diseño.svg" class="card-img-top m-auto py-3" style="width: 50%" alt="">
-
-              <div class="card-body">
-                <h5 class="card-title text-center fw-bold">Diseño personalizado</h5>
-                <p class="card-text">Diseños personalizados y únicos para cada cliente. Trabajamos en colaboración
-                  para entender su necesidades y objetivos, y crear un diseño que refleje su marca y valores. Esto
-                  garantiza una experiencia de usuario atractiva y diferenciada de la competencia.</p>
+              <!--proyecto colf  -->
+              <div class="carousel-item">
+                <div class="row g-5">
+                  <div class="col-12 col-lg-6">
+                    <h2>Gimnasio COLF</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Explicabo sequi nobis libero quam. Laboriosam iste neque
+                      quae, suscipit, ipsam commodi libero eaque totam mollitia
+                      inventore architecto vel dolorem itaque aliquid!Distinctio
+                      soluta, similique modi, veniam quas sit explicabo
+                      inventore totam sunt, nihil commodi tempora minus eveniet
+                      ducimus illo autem! Labore omnis itaque id est reiciendis
+                      quibusdam commodi doloremque aliquam incidunt?
+                    </p>
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink pt-3"></i>
+                      Laravel</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i>
+                      MySQL</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i> PHP</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i>
+                      JavaScript</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i>
+                      Bootstrap</span
+                    >
+                  </div>
+                  <div class="col">
+                    <img
+                      src="img/proyecto/responsive-colf.png"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
               </div>
+              <!--  -->
+              <!-- <div class="carousel-item">
+                <div class="row g-5">
+                  <div class="col-12 col-lg-6">
+                    <h2>The Travel Translator</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Explicabo sequi nobis libero quam. Laboriosam iste neque
+                      quae, suscipit, ipsam commodi libero eaque totam mollitia
+                      inventore architecto vel dolorem itaque aliquid!Distinctio
+                      soluta, similique modi, veniam quas sit explicabo
+                      inventore totam sunt, nihil commodi tempora minus eveniet
+                      ducimus illo autem! Labore omnis itaque id est reiciendis
+                      quibusdam commodi doloremque aliquam incidunt?
+                    </p>
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink pt-3"></i>
+                      Laravel</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i>
+                      MySQL</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i> PHP</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i>
+                      JavaScript</span
+                    >
+                    <span
+                      ><i class="bi bi-dot fs-4 text-light-pink"></i>
+                      Bootstrap</span
+                    >
+                  </div>
+                  <div class="col">
+                    <img
+                      src="img/proyecto/travel-translator.png"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div> -->
             </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
+        </section>
 
-          <div class="col d-flex justify-content-center">
-            <div class="card card-personalizada">
-              <img src="img/caracteristicas/Responsive.svg" class="card-img-top m-auto py-3" style="width: 50%" alt="">
+        <section
+          id="contacto"
+          class="home-container degrade py-4 position-relative"
+        >
+          <div class="w-100 separador-top separador"></div>
 
-              <div class="card-body">
-                <h5 class="card-title text-center fw-bold">Responsive</h5>
-                <p class="card-text">Ofrecemos diseños responsivos que se adaptan a todos los dispositivos, ya sean
-                  moviles, tablets o computadoras de escritorio. Esto tiene como ventaja una experiencia de
-                  usuario optima en cualquier dispositivo mejorando</p>
-              </div>
-            </div>
-          </div>
-          <div class="col d-flex justify-content-center">
-            <div class="card card-personalizada">
-              <img src="img/caracteristicas/Reportes.svg" class="card-img-top m-auto py-3" style="width: 50%" alt="">
+          <div class="container py-5">
+            <div class="row position-relative">
+              <img
+                src="img/telefono.svg"
+                height="225"
+                class="position-absolute col-auto"
+                alt=""
+                style="
+                  -webkit-transform: scaleX(-1);
+                  transform: scaleX(-1);
+                  opacity: 70%;
+                  left: -125px;
+                  top: 30%;
+                "
+              />
 
-              <div class="card-body">
-                <h5 class="card-title text-center fw-bold">SEO y Analytics</h5>
-                <p class="card-text">El SEO, optimiza tu sitio web para que sea más visible para los usuarios y los
-                  buscadores. Analytics, te proporciona datos sobre el tráfico del sitio web, la interaccion del
-                  usuario y cómo mejorar su rendimiento. Estos servicios pueden ayudarte a aumentar el tráfico en
-                  tu sitio web.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col d-flex justify-content-center">
-            <div class="card card-personalizada">
-              <img src="img/caracteristicas/Rendimiento.svg" class="card-img-top m-auto py-3" style="width: 50%" alt="">
+              <div class="col-12 col-lg text-white">
+                <h2 class="display-5 font-josefin py-4 text-center fst-italic">
+                  Contactanos
+                </h2>
 
-              <div class="card-body">
-                <h5 class="card-title text-center fw-bold">Rendimiento y optimización</h5>
-                <p class="card-text">Mejoramos el rendimiento y la optimización de la página web para que funcione
-                  de manera más eficiente y rápida, lo que puede mejorar la experiencia del usuario y aumentar la
-                  visibilidad y el tráfico del sitio web.</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <section id="proyectos" class="container py-4">
-        <h2 class="display-5 font-josefin text-center fst-italic">Proyectos</h2>
-
-        <div id="carouselExampleIndicators" class="carousel slide py-5">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="row g-5">
-                <div class="col-12 col-lg-6">
-                  <h2>ES Arquitectura</h2>
-
+                <div class="m-auto fs-4 w-75 position-relative text-center">
                   <p>
-                    ES Arquitecura es una plataforma digital única en su tipo, diseñada para presentar proyectos
-                    de arquitectura de manera innovadora y elegante. Funciona como una galería virtual,
-                    ofreciendo a los usuarios la posibilidad de exhibir sus creaciones en línea con gran calidad
-                    y detalle.
+                    Si estás interesado en comenzar un nuevo proyecto, nos
+                    encantaría escuchar tus ideas y discutir cómo podemos
+                    ayudarte a hacerlas realidad. No dudes en ponerte en
+                    contacto con nosotros mediante nuestros medios de contacto
+                    que encontrarás a continuación.
                   </p>
-
                   <p>
-                    Una de las principales ventajas de ES Arquitecura es su facilidad de uso, ya que cuenta con
-                    una práctica herramienta de administración de galerías y álbumes. Esto permite a los
-                    usuarios organizar sus proyectos de manera eficiente y personalizada, para que puedan ser
-                    fácilmente encontrados y apreciados por sus clientes.
+                    Estamos ansiosos por conocer más acerca de tus necesidades y
+                    cómo podemos trabajar juntos para alcanzar tus objetivos.
                   </p>
-
-                  <span><i class="bi bi-dot fs-4 text-light-pink pt-3"></i> WordPress</span>
-                  <span><i class="bi bi-dot fs-4 text-light-pink"></i> MySQL</span>
-                  <span><i class="bi bi-dot fs-4 text-light-pink"></i> PHP</span>
-                  <span><i class="bi bi-dot fs-4 text-light-pink"></i> JavaScript</span>
-                  <span><i class="bi bi-dot fs-4 text-light-pink"></i> HTML/CSS</span>
-
-                </div>
-                <div class="col">
-                  <img src="img/proyecto/es-arquitectura.png" class="d-block w-100" alt="...">
                 </div>
               </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row g-5">
-                <div class="col-12 col-lg-6">
-                  <h2>The Travel Translator</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sequi nobis libero quam.
-                    Laboriosam iste neque quae, suscipit, ipsam commodi libero eaque totam mollitia inventore
-                    architecto vel dolorem itaque aliquid!Distinctio soluta, similique modi, veniam quas sit
-                    explicabo inventore totam sunt, nihil commodi tempora minus eveniet ducimus illo autem!
-                    Labore omnis itaque id est reiciendis quibusdam commodi doloremque aliquam incidunt?</p>
-                  <span><i class="bi bi-dot fs-4 text-light-pink pt-3"></i> Laravel</span>
-                  <span><i class="bi bi-dot fs-4 text-light-pink"></i> MySQL</span>
-                  <span><i class="bi bi-dot fs-4 text-light-pink"></i> PHP</span>
-                  <span><i class="bi bi-dot fs-4 text-light-pink"></i> JavaScript</span>
-                  <span><i class="bi bi-dot fs-4 text-light-pink"></i> Bootstrap</span>
 
-                </div>
-                <div class="col">
-                  <img src="img/proyecto/travel-translator.png" class="d-block w-100"
-                    alt="...">
-                </div>
+              <div class="col-12 col-lg pt-5">
+                <form class="row g-3 bg-white p-4 rounded-5 border border-5">
+                  <div class="col-md-6">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" />
+                  </div>
+                  <div class="col-md-6">
+                    <label for="telefono" class="form-label">Telefono</label>
+                    <input type="text" class="form-control" id="telefono" />
+                  </div>
+                  <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" />
+                  </div>
+                  <div class="col-12">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea
+                      class="form-control"
+                      id="mensaje"
+                      rows="3"
+                    ></textarea>
+                  </div>
+                  <div class="col-12 d-flex justify-content-end">
+                    <button type="submit" class="btn btn-violet px-4">
+                      Enviar mensaje
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+        </section>
+
+        <!-- Boton subir arriba -->
+        <div>
+          <button
+            id="btn-to-top"
+            type="button"
+            class="btn btn-violet rounded-circle position-fixed fs-2"
+            style="
+              z-index: 9999;
+              bottom: 20px;
+              right: 20px;
+              padding: 0.05rem 0.6rem;
+            "
+            onclick="topFunction()"
+          >
+            <i class="bi bi-arrow-up-short"></i>
           </button>
         </div>
-      </section>
+      </main>
 
-      <section id="contacto" class="home-container degrade py-4 position-relative">
-        <div class="w-100 separador-top separador">
-        </div>
-
-        <div class="container py-5">
-          <div class="row position-relative">
-
-            <img src="img/telefono.svg" height="225" class="position-absolute col-auto" alt="" style="-webkit-transform: scaleX(-1);transform: scaleX(-1);opacity: 70%;left: -125px;top: 30%;">
-
-            <div class="col-12 col-lg text-white">
-              <h2 class="display-5 font-josefin py-4 text-center fst-italic">Contactanos</h2>
-
-              <div class="m-auto fs-4 w-75 position-relative text-center">
-                <p>Si estás interesado en comenzar un nuevo proyecto, nos encantaría escuchar tus ideas y discutir cómo podemos ayudarte a hacerlas realidad. No dudes en ponerte en contacto con nosotros mediante nuestros medios de contacto que encontrarás a continuación. </p>
-                <p>Estamos ansiosos por conocer más acerca de tus necesidades y cómo podemos trabajar juntos para alcanzar tus objetivos. </p>
+      <footer class="bg-white">
+        <div id="footer" class="home-container py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-6 d-flex align-items-center">
+                <img
+                  src="img/logo-texto.svg"
+                  width="200"
+                  height="106"
+                  class="m-auto"
+                  alt=""
+                />
               </div>
-            </div>
 
-            <div class="col-12 col-lg pt-5">
-
-              <form class="row g-3 bg-white p-4 rounded-5 border border-5">
-                <div class="col-md-6">
-                  <label for="nombre" class="form-label">Nombre</label>
-                  <input type="text" class="form-control" id="nombre">
-                </div>
-                <div class="col-md-6">
-                  <label for="telefono" class="form-label">Telefono</label>
-                  <input type="text" class="form-control" id="telefono">
-                </div>
-                <div class="col-12">
-                  <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email">
-                </div>
-                <div class="col-12">
-                  <label for="mensaje" class="form-label">Mensaje</label>
-                  <textarea class="form-control" id="mensaje" rows="3"></textarea>
-                </div>
-                <div class="col-12 d-flex justify-content-end">
-                  <button type="submit" class="btn btn-violet px-4">Enviar mensaje</button>
-                </div>
-              </form>
-            </div>
-
-
-          </div>
-
-        </div>
-
-      </section>
-
-      <!-- Boton subir arriba -->
-      <div>
-        <button id="btn-to-top" type="button" class="btn btn-violet rounded-circle position-fixed fs-2" style="z-index:9999;bottom:20px;right:20px; padding: 0.05rem 0.6rem ;" onclick="topFunction()">
-          <i class="bi bi-arrow-up-short"></i>
-        </button>
-      </div>
-    </main>
-
-    <footer class="bg-white ">
-      <div id="footer" class="home-container py-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-md-6 d-flex align-items-center">
-              <img src="img/logo-texto.svg" width="200" height="106" class="m-auto" alt="">
-            </div>
-
-            <div class="col-12 col-md-6 text-center d-flex flex-column justify-content-around" style="padding-top: 20px">
-              <div>
+              <div
+                class="col-12 col-md-6 text-center d-flex flex-column justify-content-around"
+                style="padding-top: 20px"
+              >
                 <div>
-                  <a href="https://www.instagram.com/ag_webdevelopment/" target="_blank" class="text-gray-dark pt-2 text-decoration-none pe-3 fs-2 text-gray-dark">
-                    <i class="bi bi-instagram"></i>
-                  </a>
-                  
-                  <a href="https://web.whatsapp.com/send?phone=2995729632&text=Hola, MENSAJE PERSONALIZADO" target="_blank" class="text-decoration-none ps-3 fs-2 text-gray-dark">
-                    <i class="bi bi-whatsapp"></i>
+                  <div>
+                    <a
+                      href="https://www.instagram.com/ag_webdevelopment/"
+                      target="_blank"
+                      class="text-gray-dark pt-2 text-decoration-none pe-3 fs-2 text-gray-dark"
+                    >
+                      <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a
+                      href="https://web.whatsapp.com/send?phone=2995729632&text=Hola, MENSAJE PERSONALIZADO"
+                      target="_blank"
+                      class="text-decoration-none ps-3 fs-2 text-gray-dark"
+                    >
+                      <i class="bi bi-whatsapp"></i>
+                    </a>
+                  </div>
+
+                  <a
+                    id="texto-mail"
+                    href="mailto:webdevelopment.ag@gmail.com"
+                    class="text-decoration-none text-gray-dark"
+                  >
+                    <span class="text-nowrap"
+                      ><i class="bi bi-envelope-at pe-2"></i
+                      >webdevelopment.ag@gmail.com</span
+                    >
                   </a>
                 </div>
-                  
-                <a id="texto-mail" href="mailto:webdevelopment.ag@gmail.com" class="text-decoration-none text-gray-dark">
-                  <span class="text-nowrap"><i class="bi bi-envelope-at pe-2"></i>webdevelopment.ag@gmail.com</span>
-                </a>
               </div>
             </div>
-
           </div>
         </div>
-      </div>
-      <div class="bg-gray-dark">
-        <div class="container text-center py-3">
-          <span class="text-white" style="font-size: 12px">© <span id="year"></span> A&G Development. Todos los derechos reservados.</span>
+        <div class="bg-gray-dark">
+          <div class="container text-center py-3">
+            <span class="text-white" style="font-size: 12px"
+              >© <span id="year"></span> A&G Development. Todos los derechos
+              reservados.</span
+            >
+          </div>
         </div>
-      </div>
-    </footer>
-  </div>
+      </footer>
+    </div>
 
-  <script src="js/main.js"></script>
-  <script src="js/subirArriba.js"></script>
-</body>
-
+    <script src="js/main.js"></script>
+    <script src="js/subirArriba.js"></script>
+  </body>
 </html>
