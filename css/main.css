@@ -26,9 +26,9 @@
 }
 
 #hero-home {
-  height: clamp(900px, 95vh, 1100px);
   margin-top: -8rem;
   padding-top: 4rem;
+  padding-bottom: 5rem;
   opacity: 95%;
 }
 
