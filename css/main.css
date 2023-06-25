@@ -62,19 +62,31 @@
   position: absolute;
   background-image: url('../img/SVG/waves.svg');
 }
+
 .separador-top {
   transform: rotate(180deg);
   top: -1px;
 }
+
 .separador-bottom {
   bottom: -1px;
 }
 
 /* Color de los indicadores del carrusel */
 .carousel-indicators [data-bs-target] {
-  background-color: #b7cde1; 
+  background-color: #b7cde1;
+  height: 4px;
+  width: 40px;
 }
 
-#texto-mail{
+#texto-mail {
   font-size: clamp(16px, 4vw, 22px);
+}
+
+.padding-top-75 {
+  padding-top: 75px !important;
+}
+
+.padding-bottom-125 {
+  padding-bottom: 125px !important;
 }
